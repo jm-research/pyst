@@ -2,5 +2,12 @@
 name = "pyst-parser"
 version = "0.0.1"
 authors = ["CanftIn"]
+build = "build.rs"
+
+[build-dependencies]
+lalrpop = { version = "0.20.0", features = ["lexer"] }
 
 [dependencies]
+lalrpop-util = { version = "0.20.0", features = ["lexer"] }
+log="0.4.1"
+regex = "0.2.2"
