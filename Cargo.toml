@@ -1,0 +1,7 @@
+[package]
+name = "pyst"
+version = "0.0.1"
+authors = ["CanftIn"]
+
+[dependencies]
+pyst-parser = {path = "pyst-parser"}
