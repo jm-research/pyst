@@ -1,0 +1,8 @@
+[package]
+name = "pyst-vm"
+version = "0.1.0"
+authors = ["CanftIn"]
+
+[dependencies]
+log = "0.4.19"
+pyst-parser = {path = "../pyst-parser"}
