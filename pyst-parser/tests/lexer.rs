@@ -115,7 +115,7 @@ mod tests {
         }
         )*
     };
-}
+  }
 
   test_indentation_with_eol! {
     test_indentation_windows_eol: WINDOWS_EOL,
@@ -159,7 +159,7 @@ mod tests {
       }
     )*
     }
-}
+  }
 
   test_double_dedent_with_eol! {
     test_double_dedent_windows_eol: WINDOWS_EOL,
@@ -192,7 +192,7 @@ mod tests {
       }
     )*
     };
-}
+  }
 
   test_newline_in_brackets! {
     test_newline_in_brackets_windows_eol: WINDOWS_EOL,
