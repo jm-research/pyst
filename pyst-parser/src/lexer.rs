@@ -18,7 +18,7 @@ pub enum LexicalError {
   StringError,
 }
 
-#[derive(Clone, Debug, Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, Copy)]
 pub struct Location {
   row: usize,
   column: usize,
@@ -80,7 +80,7 @@ impl<'input> Lexer<'input> {
     // Alphabetical keywords:
     keywords.insert(String::from("..."), Tok::Ellipsis);
     keywords.insert(String::from("False"), Tok::False);
-    keywords.insert(String::from("None"), Tok::None);
+    keywords.insert(String::from("None"), Tok::PyNone);
     keywords.insert(String::from("True"), Tok::True);
 
     keywords.insert(String::from("and"), Tok::And);

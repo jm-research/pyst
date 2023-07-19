@@ -1,5 +1,5 @@
 // based on token.h from CPython source:
-#[derive(Debug, PartialEq)]
+#[derive(Clone, Debug, PartialEq)]
 pub enum Tok {
   Name { name: String },
   Number { value: String },
@@ -56,7 +56,7 @@ pub enum Tok {
 
   // Keywords (alphabetically):
   False,
-  None,
+  PyNone,
   True,
 
   And,

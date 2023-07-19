@@ -153,7 +153,7 @@ pub enum Expression {
   },
   True,
   False,
-  None,
+  PyNone,
 }
 
 #[derive(Debug, PartialEq)]
