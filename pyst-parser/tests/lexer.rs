@@ -263,7 +263,7 @@ mod tests {
       }
     )*
     }
-}
+  }
 
   test_string_continuation! {
     test_string_continuation_windows_eol: WINDOWS_EOL,
