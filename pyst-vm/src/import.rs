@@ -4,7 +4,7 @@ use std::io;
 use std::io::ErrorKind::NotFound;
 use std::path::PathBuf;
 
-use self::pyst_parsers::parser;
+use self::pyst_parser::parser;
 use super::compile;
 use super::pyobject::{DictProtocol, PyObject, PyObjectKind, PyResult};
 use super::vm::VirtualMachine;

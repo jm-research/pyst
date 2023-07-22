@@ -2,7 +2,7 @@ use super::pyobject::{PyFuncArgs, PyObject, PyObjectKind, PyObjectRef, PyResult}
 use super::vm::VirtualMachine;
 use std::collections::HashMap;
 
-fn init(vm: &mut VirtualMachine, args: PyFuncArgs) -> PyResult {
+fn init(vm: &mut VirtualMachine, _args: PyFuncArgs) -> PyResult {
   Ok(vm.new_str("todo".to_string()))
 }
 
