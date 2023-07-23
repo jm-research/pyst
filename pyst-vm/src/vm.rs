@@ -503,7 +503,7 @@ impl VirtualMachine {
         ref code,
         ref scope,
       } => {
-        let mut scope = self.ctx.new_scope(Some(scope.clone()));
+        let scope = self.ctx.new_scope(Some(scope.clone()));
         let code_object = copy_code(code.clone());
         for (name, value) in code_object.arg_names.iter().zip(args.args) {
           scope.set_item(name, value);
@@ -662,7 +662,7 @@ impl VirtualMachine {
         assert!(*size == 2 || *size == 3);
         let elements = self.pop_multiple(*size);
 
-        let mut out: Vec<Option<i32>> = elements
+        let out: Vec<Option<i32>> = elements
           .into_iter()
           .map(|x| match x.borrow().kind {
             PyObjectKind::Integer { value } => Some(value),
@@ -724,7 +724,7 @@ impl VirtualMachine {
         // The top of stack contains the iterator, lets push it forward:
         let next_obj: Option<PyObjectRef> = {
           let top_of_stack = self.last_value();
-          let mut ref_mut: RefMut<PyObject> = top_of_stack.deref().borrow_mut();
+          let ref_mut: RefMut<PyObject> = top_of_stack.deref().borrow_mut();
           // We require a mutable pyobject here to update the iterator:
           let mut iterator = ref_mut; // &mut PyObject = ref_mut.;
                                       // let () = iterator;
